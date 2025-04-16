@@ -1,5 +1,5 @@
 #v1.0
-sudo echo installing brew...
+sudo echo sinently installing brew...
 # 
 # start a background task to keep the sudo auth alive for 20 minutes so that the script installs silently
 sudo --validate
