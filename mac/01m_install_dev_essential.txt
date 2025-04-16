@@ -1,4 +1,6 @@
 #v1.0
+sudo echo installing crossos developer setup
+
 #DEV Mode not needed on macOS
 
 #EXTEND SLEEP SETTINGS
