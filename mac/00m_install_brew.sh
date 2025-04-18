@@ -1,5 +1,5 @@
 #v1.0
-sudo echo sinently installing brew...
+sudo echo silently installing brew...
 # 
 # start a background task to keep the sudo auth alive for 20 minutes so that the script installs silently
 sudo --validate
@@ -28,8 +28,9 @@ if [ "$arch" = "arm64" ]; then
 #ARM START has python3 only on ARM
 echo "Apple Silicon (arm64)"
 #only needed on ARM64
-: make brew available to all users. only admins can run it. normal users get a harmless error message. the goal is to make the brew installed programs available to everyone.
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' | sudo tee -a /etc/zprofile > /dev/null
+# make brew available to all users. only admins can run it. normal users get a harmless error message. the goal is to make the brew installed programs available to everyone.
+#check /etc/zprofile if the eval command is already in the file. if not add the command enclosed by a new line before and after it
+grep -qxF 'eval "$(/opt/homebrew/bin/brew shellenv)"' /etc/zprofile || { echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'; echo; } | sudo tee -a /etc/zprofile > /dev/null
 #ARM END
 elif [ "$arch" = "x86_64" ]; then
 #X86 START has python3 only on x86
