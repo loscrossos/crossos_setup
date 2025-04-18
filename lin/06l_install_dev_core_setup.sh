@@ -2,7 +2,7 @@
 #DEV Mode not needed on Linux
 
 #EXTEND SLEEP SETTINGS
-./installers/linux_setup_sleeptime.txt
+./installers/linux_setup_sleeptime.sh
  
 
 #COMPILER TOOLS
