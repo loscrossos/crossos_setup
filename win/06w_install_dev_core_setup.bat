@@ -76,6 +76,9 @@ rem CURL comes pre-installed in w11
 REM GIT
 rem 66mb
 %userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id Git.Git -e --silent --accept-package-agreements --accept-source-agreements --scope machine
+rem fix git not making bash available
+mklink "c:\Program Files\Git\cmd\bash.exe" "c:\Program Files\Git\bin\bash.exe"
+mklink "c:\Program Files\Git\cmd\sh.exe" "c:\Program Files\Git\bin\sh.exe"
 
 rem GIT LFS initialize
 git lfs install
