@@ -80,8 +80,11 @@ rem 66mb
 rem fix git not making bash available
 mklink "c:\Program Files\Git\cmd\bash.exe" "c:\Program Files\Git\bin\bash.exe"
 mklink "c:\Program Files\Git\cmd\sh.exe" "c:\Program Files\Git\bin\sh.exe"
-rem enforce code signing. this is a best practice, needed for open source contributions and does not bother normal commits
-git config --system alias.c "commit -s"
+rem GIT compatibility
+rem this command enables git to work in win-linux dual boot. Else it would think files are completely changed when one OS changes the line feeds that the other needs.
+rem files checked out are not converted to windows format. files checked in are converted to linux format. Repo is kept in linux format
+git config --system core.autocrlf input
+
 rem GIT LFS initialize
 git lfs install
 

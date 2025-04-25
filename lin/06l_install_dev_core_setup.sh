@@ -58,6 +58,10 @@ sudo apt install -y   curl
 #GIT
 #git comes preinstalled but  we need to enable large downloads for git.
 sudo apt install -y git
+#force to checkin in linux style
+sudo git config --system core.autocrlf input
+#check clrf with
+#git config --get core.autocrlf
 
 #GIT LFS
 sudo apt install -y git-lfs

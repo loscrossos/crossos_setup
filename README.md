@@ -77,7 +77,7 @@ More precisely, this is what we are going to do:
 If instructions are for a specific OS, they will be marked as such (Mac/Win/Lin). If instructions apply to all systems the same they will be marked as **OSI** (OS Independent).
 
 
-### System Requierements
+### System Requirements
 
 **OS Version**: Your OS should be supported by the manufacturer! Currently Focus on  NVidia CUDA capable cards and Apple Silicone (ARM).
 
@@ -87,17 +87,17 @@ If instructions are for a specific OS, they will be marked as such (Mac/Win/Lin)
 **Systems tested**
 The scripts were tested on the following OS:
 
-System              |Arch   | Tested
----                 | ---   | ---
-KunbuntuLTS 24.04   | x64   | works (focus)
-Mint 22.01          | x64   | works 
-UbutuLTS 24.04      | x64   | works 
-Windows11           | x64   | works (focus)
-MacOS Sequoia       | ARM   | works (focus)
-MacOS Sonoma        | ---   | untested but should work
-MacOS Ventura       | x64   | works
-MacOS Monterey      | ---   | untested but should work
-MacOS BigSur        | x64   | works
+OS  | System            |Arch   | Tested
+--- |---                | ---   | ---
+Mac |***MacOS Sequoia***| ARM   | works (focus)
+Mac |MacOS Sonoma       | ---   | untested but should work
+Mac |MacOS Ventura      | x64   | works
+Win |***Windows11pro*** | x64   | works (focus)
+Lin |***KunbuntuLTS24***| x64   | works (focus)
+Lin |Mint 22.01         | x64   | works 
+Lin |Ubutu LTS24        | x64   | works 
+
+
 
 
 
