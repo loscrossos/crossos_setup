@@ -61,10 +61,6 @@ fi
 
 
 
-
-
-
-
 #WGET
 script -q /dev/null brew install wget
 
@@ -75,11 +71,13 @@ script -q /dev/null brew install curl
 
 
 #GIT
-#was installed by xcode tools triggered by brew installation
-
+#enforce commitsigning. its good practice and required for most open source contributions
+sudo git config --system alias.c "commit -s"
 
 #GIT LFS
 script -q /dev/null brew install git-lfs
+
+
 git lfs install
 
 
