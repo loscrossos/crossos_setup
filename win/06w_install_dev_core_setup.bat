@@ -80,7 +80,8 @@ rem 66mb
 rem fix git not making bash available
 mklink "c:\Program Files\Git\cmd\bash.exe" "c:\Program Files\Git\bin\bash.exe"
 mklink "c:\Program Files\Git\cmd\sh.exe" "c:\Program Files\Git\bin\sh.exe"
-
+rem enforce code signing. this is a best practice, needed for open source contributions and does not bother normal commits
+git config --system alias.c "commit -s"
 rem GIT LFS initialize
 git lfs install
 
