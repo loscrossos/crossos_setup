@@ -64,7 +64,8 @@ REM  25mb
 %userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.12 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
 REM 26mb
 %userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.13 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
-
+rem install global shortcut for python3 as expected by some scripts across OSes
+mklink c:\windows\python3.exe c:\windows\py.exe
 
 REM WGET
 %userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=JernejSimoncic.Wget -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
