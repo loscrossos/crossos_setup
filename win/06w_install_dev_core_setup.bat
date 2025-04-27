@@ -15,7 +15,7 @@ if %errorlevel% neq 0 (
 
 
 REM ENABLE DEVELOPER MODE
-rem enable developer mode. this allows to create symlinks. This is used by python pip cache and virtual environments.
+rem enable developer mode. This is used by python pip cache and virtual environments.
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx /f /t REG_DWORD /v "AllowDevelopmentWithoutDevLicense" /d 1
 
 REM  ENABLE FILESYSTEM LONG PATHs. this is needed for python virtual environments.
