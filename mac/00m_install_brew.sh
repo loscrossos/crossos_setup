@@ -4,10 +4,10 @@ sudo echo enter password again:
 
 # start a background task to keep the sudo auth alive for 20 minutes so that the script installs silently
 
-( while true; do sleep 5; sudo --validate; done ) &
-SUDOPID=$!
+#( while true; do sleep 5; sudo --validate; done ) &
+#SUDOPID=$!
 # start a background task to kill the loop after 20 minutes (1200 seconds)
-( sleep 1200 && kill $SUDOPID ) &
+#( sleep 1200 && kill $SUDOPID ) &
 
 
 
@@ -55,5 +55,5 @@ echo "Intel (x86_64) detected"
 fi
 fi
 
-kill $SUDOPID
+#kill $SUDOPID
 echo brew is installed!
