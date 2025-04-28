@@ -2,24 +2,25 @@
 
 # Define the commands you want to check (edit this list)
 commands_to_check=(
-  "gcc --version"
-  "g++ --version"
-  "cmake --version" 
-  "python3.9 --version"
+  "gcc --version       "
+  "g++ --version       "
+  "cmake --version     "
+
+
+  "python3.9 --version "
   "python3.10 --version"
   "python3.11 --version"
   "python3.12 --version"
   "python3.13 --version"
-  "wget --version"
-  "curl --version"
-  "git --version"
-  "gh --version"
-  "ffmpeg -version"
-  "espeak-ng --version"
-  "code --version"
-  "codium --version"
-  "ag --version"
-
+  "wget --version      "
+  "curl --version      "
+  "git --version       "
+  "gh --version        "
+  "ffmpeg -version     "
+  "espeak-ng --version "
+  "code --version      "
+  "codium --version    "
+  "ag --version        "
 )
 
 # Counters
@@ -43,6 +44,6 @@ done
 
 # Print summary
 echo ""
-echo "  ✅: $success_count,  ❌: $fail_count"
+echo "Summary:  ✅: $success_count,  ❌: $fail_count"
 
 exit 0
