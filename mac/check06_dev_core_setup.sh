@@ -16,16 +16,20 @@ commands_to_check=(
   "gh --version"
   "ffmpeg -version"
   "espeak-ng --version"
+  "code --version"
+  "codium --version"
+  "ag --version"
+
 )
 
 # Counters
 success_count=0
 fail_count=0
 
-echo "Checking command availability..."
+echo "Checking dev Setup "
 
 for cmd in "${commands_to_check[@]}"; do
-  echo -n "Checking: '$cmd' ... "
+  echo -n "Check: '$cmd' ... "
 
   # Run the command but suppress output (just check exit code)
   if eval "$cmd" &> /dev/null; then
@@ -39,8 +43,6 @@ done
 
 # Print summary
 echo ""
-echo "Summary:"
-echo "  ✅ Successful: $success_count"
-echo "  ❌ Failed:     $fail_count"
+echo "  ✅: $success_count,  ❌: $fail_count"
 
 exit 0
