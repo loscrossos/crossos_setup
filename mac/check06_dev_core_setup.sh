@@ -2,7 +2,6 @@
 
 # Define the commands you want to check (edit this list)
 commands_to_check=(
-  "brew"
   "gcc --version"
   "g++ --version"
   "cmake --version" 
