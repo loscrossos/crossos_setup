@@ -58,11 +58,10 @@ Repository	|Github CLI	        |x	    |x	        |x	    |free,propietary| needed
 AudioLibrary|FFmpeg	            |x      |x	        |PI	    |free,OpenSource| used by several audio/video libraries
 Phonemizer  |eSpeak-NG          |x	    |x	        |x	    |free,OpenSource| used by several AI text to speech models.
 
-### (coming up) Development IDE: Code Editors/Integraded Development Environment (IDE)
+### OSI07 Development IDE: Code Editors/Integraded Development Environment (IDE)
 
 Category	| Software	        | Macos	| Windows	| Linux	| Price	        | Commentary
  ---        | ---               | ---   | ---       | ---   | ---           | ---
-IDE         |Kate	            |x      |x	        |PI/x	|free,openSource|does not work on Macos11. preinstalled in KDE.
 IDE  	    |VS Code	        |x	    |x	        |x	    |free,OpenSource| IDE from microsoft. widely used. has some propietary code.
 IDE         |VS Codium	        |x	    |x	        |x	    |free,OpenSource| open source, telemetry free version of VS Code. Some plugins do not work with it.
 code search |ag silversearcher  |x	    |x	        |x	    |free,OpenSource|ultra fast terminal code search tool

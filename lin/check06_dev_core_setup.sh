@@ -4,7 +4,10 @@
 commands_to_check=(
   "gcc --version"
   "g++ --version"
-  "cmake --version" 
+  "cmake --version"
+  "nvidia-smi --version"
+  "nvcc --version" 
+
   "python3.9 --version"
   "python3.10 --version"
   "python3.11 --version"

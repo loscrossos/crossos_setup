@@ -25,6 +25,8 @@ REM show file extensions
 REM  only current user
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t REG_DWORD /d 0 /f
 
+
+
 REM enable "run as other user" entry
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "ShowRunasDifferentuserinStart" /t REG_DWORD /d 1 /f
 REM enable "run as other user" in context menu
