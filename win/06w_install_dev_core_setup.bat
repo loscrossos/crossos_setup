@@ -86,7 +86,8 @@ rem GIT compatibility
 rem this command enables git to work in win-linux dual boot. Else it would think files are completely changed when one OS changes the line feeds that the other needs.
 rem files checked out are not converted to windows format. files checked in are converted to linux format. Repo is kept in linux format
 git config --system core.autocrlf input
-
+rem this command enables long paths for git. else git refuses to work on paths longer than 260c on windows
+git config --system core.longpaths true
 rem GIT LFS initialize
 git lfs install
 
