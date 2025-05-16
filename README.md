@@ -21,32 +21,23 @@ And the best part: no complicated intallations! The installation and setup is si
 ## Vision
 
 This project focuses on:
-
-
+- Learn-Once-Use-Forever: What you learn should ideally apply to any OS. 
 - Cross-Platform Eco-Systems: Install essential tools that work seamlessly across all major operating systems. 
-
 - Open Source first: free open source apps where possible. Free-Proprietary apps only when essential. Only free apps!
-
 - Bloat-free defaults - no unused packages and clutter. Lets stay efficient!
-
 - Optional AI/dev setup - Ready-to-go AI enabled Python setup (CUDA-enabled for Windows/Linux)
-
 - Safe & transparent - No admin rights until you approve. No system-hacks: only safe settings using official system mechanisms. Optmizations on the edge of this remain optional.
-
 - Free Information. All information and code is free! we should not pay for wisdom.
 
-
 Perfect for:
-
 - Developers who work across OSes
-
 - Designers, writers, or researchers who switch devices
-
 - Anyone who wants a clean, efficient setup
 
 ## Mission
 
 what you will find here:
+- Information on how to setup your system so that you can move with ease across MacOS, Windows and Linux.
 - Installers for automatic software setup of OS independent configurations for diverse areas 
 - Information on how to get OS independent workflows using the best software available
 - step-by-step guides to get to your goal
@@ -57,34 +48,48 @@ what you will find here:
 
 # Preparation
 
+The CrossOS-Setup consists of a base setup and scripts for different goals. 
+
 ## Installation overview 
 Just clone this repository and install whatever modules you need from it. Use the pre-configured setup to OSI*fy* your computer.
 
 
 More precisely, this is what we are going to do:
 
-- read the nomenclature (so you know how to read the instructions)
-- check the pre-requisites: supported systems and hardware: so you know if this works for you
-- get the latest updates for your system: else the installation may fail
-- ensure git is installed (or perform a one liner easy install)
-- downlad the installer repository (just follow instructions)
-- install the script you need!
+- **System Requirements**: check the pre-requisites,  supported systems and hardware, so you know if this works for you
+- **Enable Crossos**: lets get the installer files ready in your PC.
+    - **Update your system**: get the latest updates for your system: else the installation may fail
+    - **Enable the package manager**: enables a sofware package manager
+    - **Get Git**: ensure Git is installed (or perform a one liner easy install)
+    - **Download the repository** downlad the installer files. just follow instructions.
+- **Setup your system** install the script you need! currently Available:
+    - **Python AI Development EnvironmentSetup** a full AI development setup
+        - System checker: see what your system is missing to do AI development
+        - Setup Installer: Install and setup all needed packages fully automatically
+    
 
 
 
-### Nomenclature
 
-If instructions are for a specific OS, they will be marked as such (Mac/Win/Lin). If instructions apply to all systems the same they will be marked as **OSI** (OS Independent).
 
 
 ### System Requirements
 
-**OS Version**: Your OS should be supported by the manufacturer! Currently Focus on  NVidia CUDA capable cards and Apple Silicone (ARM).
+Currently Focus on:
 
-**Installed Software**: You can safely start from a fully empty system installation or a running system. You can apply the scripts even if you have some of the tools installed, in that case the installed tool will be either updated or skipped.
+- MacOS Sequoia, Windows11, Kubuntu Linux (Debian based systems)
+- NVidia CUDA capable cards and Apple Silicone (ARM).
+
+**Nomenclature**
+
+If instructions are for a specific OS, they will be marked as such (Mac/Win/Lin). If instructions apply to all systems the same they will be marked as **CrossOS** or **OSI** (OS Independent). 
+
+**OS Version**
+
+Your OS should be supported by the manufacturer! 
+If you open support requests for Windows95 you likely wont get answers.
 
 
-**Systems tested**
 The scripts were tested on the following OS:
 
 OS  | System            |Arch   | Tested
@@ -99,103 +104,25 @@ Lin |Ubutu LTS24        | x64   | works
 
 
 
+**Installed Software**: You can safely start from a fully empty system installation or a running system. You can apply the scripts even if you have some of the tools installed, in that case the installed tool will be either updated or skipped.
 
 
-### Update your system
-**IMPORTANT**: Before installing any script you should fully update your system. Background updates will block the installation or parts of it leaving you with a half installed setup.
-This is specially the case on windows and linux.
-
-on mac and windows do this through the system settings menus. On Linux-Ubuntu-based systems enter this on a console 
-
-```sudo apt -y update && sudo apt -y upgrade```
+## Lets start
 
 
-### Install git
+Pre-requirement: To enable your systems package manager and get the installer to your system follow this:
 
-**MacOS**
-
-You need brew and git installed. 
-
-If those are not present you can directly run a fully silent brew installer (that will enable git) by calling this code in the terminal (press Cmd+Space and type terminal). It automatically will ask you for admin password, so do not use sudo on it. copy paste this into the terminal:
-
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/loscrossos/crossos_setup/HEAD/mac/00m_install_brew.sh)"
-```
-
-
-**Windows**
-
-
-You can directly install git with this command from a cmd-terminal with admin rights. To start an admin-terminal press [Windows-key]+x and select "Terminal (Admin)". Then enter this command to install git for all users: 
-
-```
-winget install --id Git.Git -e --silent --accept-package-agreements --accept-source-agreements --scope machine
-```
-
-**Linux** 
-
-Linux should come with git installed. if not just run this on Ubuntu based systems:
-
-```
-sudo apt install git
-```
+[Enable Crossos](https://github.com/loscrossos/crossos_setup/blob/main/docs/01_enable_crossos_setup.md)
 
 
 
-### Download the repository (CrossOS)
+To setup your system for  pythonAI development:
 
-now get the latest version of this repository:
-
-```
-git clone https://github.com/loscrossos/crossos_setup
-cd crossos_setup
-```
+[Development Environment setup](https://github.com/loscrossos/crossos_setup/blob/main/docs/06_development_env_setup.md)
 
 
 
-# Python AI Development Setup 
 
-Fully automated installer for a ready-to-use python based-AI development setup.
-Purposes:
-- General purpose python software development
-- Runing LLMs
-- Running AI Models like: Text-to-Speech (TTS), Text-To-Video(TTV), Image-to-Video(ITV), Text-to-Audio(TTA), Voice cloning etc.
-
-Based on on standard python, CUDA(WinLin), Metal(Mac).
-Windows: Does not use WSL.
-
-for a full overview of the components read the [Development Setup Documentation](https://github.com/loscrossos/crossos_setup/blob/main/docs/osi06_development_setup.md)
-
-
-### MacOS
-
-
-start the installer (yes it has a txt ending) (it will ask you for admin password):
-```
-cd mac
-./06m_install_dev_core_setup.sh
-```
-
-
-### Windows
-
-run the dev_essential installer file. The installer will automatically ask for admin rights (if not already in admin mode):
-
-```
-cd win
-06w_install_dev_core_setup.bat
-```
-
-
-
-### Linux
-
-start the installer (yes it has a txt ending) (it will ask you for admin password):
-
-```
-cd lin
-./06l_install_dev_core_setup.sh
-```
 
 
 

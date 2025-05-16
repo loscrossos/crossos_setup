@@ -1,5 +1,5 @@
 #v1.0
-echo crossos setup! Runs this as admin. Enter password twice for silent setup.
+echo crossos setup: Brew installer. Runs this as admin. Enter password twice for silent setup.
 sudo echo enter password again:
 
 # start a background task to keep the sudo auth alive for 20 minutes so that the script installs silently
