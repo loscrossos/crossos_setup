@@ -74,6 +74,31 @@ IDE         |VS Codium	        |x	    |x	        |x	    |free,OpenSource| open s
 code search |ag silversearcher  |x	    |x	        |x	    |free,OpenSource|ultra fast terminal code search tool
 
 
+### User development setup
+
+
+The Crossos setup is designed in a secure way. This means all the setup is in admin mode but your day-to-day programming tasks are in normal-user mode. Thats right. You dont need Admin-rights for AI python development. You just have to setup your system right. All the projects i do are with a normal user account. 
+
+The last script will therefore, setup your development account with user specific settings as listed below:
+
+The IDE Plugins will be installed for VS Code and for VS Codium. 
+
+
+Category	| Software	            | Macos	| Windows	| Linux	| Licence       | Commentary
+ ---        | ---                   | ---   | ---       | ---   | ---           | ---
+Setting     | Show file extensions  | PI    | x         | PI    |  n.a.         | this is done on a per-user basis on windowws as not to confuse other users if its a shared PC.
+IDE-Plugin  | ms-Python             | x     | x         | x     | free          | Python code highlighting
+IDE-Plugin  | vscode-pylance        | x     | x         | x     | free          | code intelligence an autocomlete. For VSCode only. Its licence does not allow to install on Codium
+IDE-Plugin  | pyright               | x     | x         | x     | free          | Codium replancement for Pylance 
+IDE-Plugin  | markdown-mermaid      | x     | x         | x     | free          | Display Markdown mermaid diagrams in md-files
+IDE-Plugin  | vsc-python-indent     | x     | x         | x     | free          | Auto-indent for python code
+IDE-Plugin  | even-better-toml      | x     | x         | x     | free          | Code intelligence for toml-files
+IDE-Plugin  | Autodocstring         | x     | x         | x     | free          | Autocreate documentation strings if you start to type a comment directly under a python function
+IDE-Plugin  | Git-Graph             | x     | x         | x     | free          | Graphically see git and perform actions on it. Good if you work in programming teams.
+IDE-Plugin  | vscode-docker         | x     | x         | x     | free          | Manage docker containers
+IDE-Plugin  | vscode-versionlens    | x     | x         | x     | free          | show the latest version of a library when browsing dependency files.
+
+
 
 
 
@@ -105,7 +130,7 @@ From an admin account:
 ./06m_install_dev_core_setup.sh
 ./07m_install_dev_ide.sh
 ```
-reboot your system and from the intended developer account:
+reboot your system and from the intended developer account call the last script:
 ```
 ./user_dev_install.sh
 ```
@@ -118,7 +143,7 @@ From an admin console:
 06w_install_dev_core_setup.bat
 07w_install_dev_ide.bat
 ```
-reboot your system and from the intended developer account:
+reboot your system and from the intended developer account call the last script:
 ```
 user_dev_install.bat
 ```
@@ -131,7 +156,7 @@ From an admin acccount:
 ./06m_install_dev_core_setup.sh
 ./07m_install_dev_ide.sh
 ```
-reboot your system and from the intended developer account:
+reboot your system and from the intended developer account call the last script:
 ```
 ./user_dev_install.sh
 ```
