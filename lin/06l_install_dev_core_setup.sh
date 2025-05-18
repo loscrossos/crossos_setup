@@ -1,3 +1,4 @@
+#!/bin/bash
 #v1.0
 #DEV Mode not needed on Linux
 
@@ -23,10 +24,26 @@ sudo nvidia-smi -pm 1
 
 #CUDA
 # NVIDIA AI PROGRAMMING TOOLKIT
-sudo apt install -y nvidia-cuda-toolkit
-
-
-
+# Get Ubuntu version ID (e.g., "20.04")
+VERSION_ID=$(grep '^VERSION_ID=' /etc/os-release | cut -d '"' -f 2)
+case "$VERSION_ID" in
+  "20.04")
+    echo "Detected Ubuntu 20.04"
+    sudo apt install -y nvidia-cuda-toolkit
+    ;;
+  "22.04")
+    echo "Detected Ubuntu 22.04"
+    sudo apt install -y nvidia-cuda-toolkit
+    ;;
+  "24.04")
+    echo "Detected Ubuntu 24.04"
+    sudo ./installers/lin2404_install_nvidiatk.sh 
+    ;;
+  *)
+    echo "Unsupported Ubuntu version for CUDA12.9. Installing available version: $VERSION_ID"
+    sudo apt install -y nvidia-cuda-toolkit
+    ;;
+esac
 
 
 
