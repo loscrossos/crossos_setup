@@ -109,6 +109,7 @@ Lin |Ubutu LTS24        | x64   | works
 
 ## Lets start
 
+**IMPORTANT:** Before making changes to an existing system, make sure to create a backup of your important files!
 
 Pre-requirement: To enable your systems package manager and get the installer to your system follow this:
 
