@@ -111,15 +111,10 @@ Lin |Ubutu LTS24        | x64   | works
 
 **IMPORTANT:** Before making changes to an existing system, make sure to create a backup of your important files!
 
-Pre-requirement: To enable your systems package manager and get the installer to your system follow this:
-
-[Enable Crossos](https://github.com/loscrossos/crossos_setup/blob/main/docs/01_enable_crossos_setup.md)
-
-
-
-To setup your system for  pythonAI development:
-
-[Development Environment setup](https://github.com/loscrossos/crossos_setup/blob/main/docs/06_development_env_setup.md)
+Step            | Comment                                   | Document
+---             | ---                                       | ---
+pre-requisite   | enable package manager and clone this repo| [Enable Crossos Document](https://github.com/loscrossos/crossos_setup/blob/main/docs/01_enable_crossos_setup.md) 
+Setup           | Python AI Development Setup               | [Development Environment setup](https://github.com/loscrossos/crossos_setup/blob/main/docs/06_development_env_setup.md)
 
 
 

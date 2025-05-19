@@ -67,7 +67,12 @@ cd lin
 
 ### Step-by-Step Installation
 
+Follow the steps below. 
 
+Alternatively watch this video for the same procedure: https://youtu.be/wdZRp-s3GRY
+
+
+---
 **1.- Get git**
 
 Git is a "version control system". It is used to manage software code. We are going to use it to copy the crossos_setup code to your computer.

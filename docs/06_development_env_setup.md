@@ -165,6 +165,11 @@ reboot your system and from the intended developer account call the last script:
 
 ### Step-by-Step Installation
 
+Follow the steps below. 
+
+Alternatively watch this video for the same procedure: https://youtu.be/XPE14iXlFBQ
+
+---
 
 **1.-Enter OS Directory** We enter the directory for our OS with the "change directory" (cd) command:
 
