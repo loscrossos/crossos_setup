@@ -13,17 +13,15 @@ if %errorlevel% neq 0 (
 
 rem VS CODE 
 rem 100mb
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id Microsoft.VisualStudioCode --silent --accept-package-agreements --accept-source-agreements  --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id Microsoft.VisualStudioCode --silent --accept-package-agreements --accept-source-agreements  --scope machine --source winget
 
 
 rem CODIUM
 rem 97mb 
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id VSCodium.VSCodium -e --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id VSCodium.VSCodium -e --silent --accept-package-agreements --accept-source-agreements --scope machine  --source winget
 rem programming tools
 
 
-rem SILVERSEARCHER ultra fast code search tool
-rem from https://github.com/ggreer/the_silver_searcher
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install "The Silver Searcher"  --silent --accept-package-agreements --accept-source-agreements
+
 
 

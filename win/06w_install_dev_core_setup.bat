@@ -45,32 +45,32 @@ REM  powercfg /change monitor-timeout-dc 30
 
 REM MSVC BUILD TOOLS 2022
 REM 2.8GB
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Microsoft.VisualStudio.2022.BuildTools --force --override "--wait --passive --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows11SDK.26100 --add  Microsoft.VisualStudio.Component.VC.CMake.Project"  -e  --silent --accept-package-agreements --accept-source-agreements
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Microsoft.VisualStudio.2022.BuildTools --force --override "--wait --passive --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows11SDK.26100 --add  Microsoft.VisualStudio.Component.VC.CMake.Project"  -e  --silent --accept-package-agreements --accept-source-agreements --source winget
 
 
 REM INSTALL GPU DRIVER AND CUDA TOOLKIT - 13.64GB
 REM  windows defaults to 560.94, current nvidia latest is 572.60, installed with CUDA is: 571.96
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Nvidia.CUDA -e --silent --accept-package-agreements --accept-source-agreements
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Nvidia.CUDA -e --silent --accept-package-agreements --accept-source-agreements --source winget
 
 
 REM INSTALL PYTHON
 REM  26mb
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.8  -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.8  -e  --silent --accept-package-agreements --accept-source-agreements --scope machine --source winget
 REM  28mb
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.9  -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.9  -e  --silent --accept-package-agreements --accept-source-agreements --scope machine --source winget
 REM  28mb
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.10 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.10 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine --source winget
 REM  27mb
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.11 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.11 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine --source winget
 REM  25mb
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.12 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.12 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine --source winget
 REM 26mb
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.13 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Python.Python.3.13 -e  --silent --accept-package-agreements --accept-source-agreements --scope machine --source winget
 rem install global shortcut for python3 as expected by some scripts across OSes
 mklink c:\windows\python3.exe c:\windows\py.exe
 
 REM WGET
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=JernejSimoncic.Wget -e  --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=JernejSimoncic.Wget -e  --silent --accept-package-agreements --accept-source-agreements --scope machine --source winget
 rem this line fixes a bug in winget installer. google winget cli issue 4172
 icacls "C:\Program Files\WinGet\Packages\*" /grant "BUILTIN\Users:(RX)"
 
@@ -78,7 +78,7 @@ rem CURL comes pre-installed in w11
 
 REM GIT
 rem 66mb
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id Git.Git -e --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id Git.Git -e --silent --accept-package-agreements --accept-source-agreements --scope machine --source winget
 rem fix git not making bash available
 mklink "c:\Program Files\Git\cmd\bash.exe" "c:\Program Files\Git\bin\bash.exe"
 mklink "c:\Program Files\Git\cmd\sh.exe" "c:\Program Files\Git\bin\sh.exe"
@@ -93,16 +93,16 @@ git lfs install
 
 
 REM GITHUB CLI 13mb
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id GitHub.cli -e --silent --accept-package-agreements --accept-source-agreements --scope machine
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id GitHub.cli -e --silent --accept-package-agreements --accept-source-agreements --scope machine --source winget
 
 
 REM FFMPEG 169mb
-rem https://github.com/microsoft/winget-pkgs/issues/120360
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=Gyan.FFmpeg.Shared --silent --accept-package-agreements --accept-source-agreements --scope machine
-rem this line fixes a bug in winget installer. google winget cli issue 4172
-icacls "C:\Program Files\WinGet\Packages\*" /grant "BUILTIN\Users:(RX)"
+call installers\installer_win_ffmpeg.bat
 
+rem SILVERSEARCHER ultra fast code search tool
+rem from https://github.com/ggreer/the_silver_searcher
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install "The Silver Searcher"  --silent --accept-package-agreements --accept-source-agreements  --source winget
 
 rem ESPEAKNG
 rem requires UAC
-%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=eSpeak-NG.eSpeak-NG  -e --silent --accept-package-agreements --accept-source-agreements 
+%userprofile%\AppData\Local\Microsoft\WindowsApps\winget install --id=eSpeak-NG.eSpeak-NG  -e --silent --accept-package-agreements --accept-source-agreements --source winget
