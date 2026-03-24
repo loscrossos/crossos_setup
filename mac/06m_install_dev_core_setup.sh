@@ -72,7 +72,8 @@ script -q /dev/null brew install curl
 
 #GIT
 
-
+# git xet is a plugin for giut to support large files in repos such as AI models
+script -q /dev/null brew install git-xet
 #GIT LFS
 script -q /dev/null brew install git-lfs
 
