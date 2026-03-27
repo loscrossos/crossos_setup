@@ -77,6 +77,11 @@ sudo apt install -y ffmpeg
 sudo apt install -y espeak-ng
 
 
+#SILVERSEARCHER ultra fast code search tool
+# from https://github.com/ggreer/the_silver_searcher
+sudo apt install -y silversearcher-ag
+
+
 
 
 #additional tools

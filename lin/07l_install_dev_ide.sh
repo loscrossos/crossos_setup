@@ -15,11 +15,6 @@ sudo apt-get install -y codium
 
 
 
-#SILVERSEARCHER ultra fast code search tool
-# from https://github.com/ggreer/the_silver_searcher
-sudo apt install -y silversearcher-ag
-
-
 
  
 
