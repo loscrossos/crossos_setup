@@ -14,7 +14,7 @@ sudo apt-get update
 #install latest docker
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 #enable and start docker
-if command -v systemctl >/dev/null 2>&1; then
+if command -v systemctl >/dev/null 2>&1 && [ -d /run/systemd/system ]; then
     sudo systemctl enable --now docker
 else
     sudo service docker start
